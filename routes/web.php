@@ -12,6 +12,7 @@ Route::get('/', function () {
 Route::prefix('/admin')->group(function(){
     Route::get('/mahasiswa/{nilai}', [MahasiswaController::class, 'index'])->name('admin.mahasiswa');
     Route::get('/mhs/binus', [MahasiswaController:: class, 'tampil']);
+    Route::get('/mhs/post',[MahasiswaController::class,'view'])->name('view.post.mhs');
     
     Route::get('/dosen/{dosen}', function($dosen){
         $arrMahasiswa = ['Risa Lestari', 'Rudi Hermawan','Bambang Kusumo','Lisa Permata'];
